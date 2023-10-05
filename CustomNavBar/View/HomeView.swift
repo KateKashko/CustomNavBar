@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
 
         //for search bar
-        @State var filteredItems = apps
+    @Binding var filteredItems: [AppItem]
         var body: some View {
            
             

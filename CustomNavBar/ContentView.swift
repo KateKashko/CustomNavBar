@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var filteredItems = apps
+    
     var body: some View {
-        HomeView()
+        CustomNavigationView(view: HomeView(filteredItems: $filteredItems), onSearch: { (txt) in
+            if txt != ""{
+                self.filteredItems = apps.filter{$0.name.lowercased().contains(txt.lowercased())}
+            } else{ self.filteredItems = apps
+            }
+        }, onCancel: {
+            print("from chanceled")
+        })
+        .ignoresSafeArea() // NavBar заполняет верх
     }
 }
 
