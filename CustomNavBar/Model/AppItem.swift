@@ -15,16 +15,16 @@ struct AppItem: Identifiable {
     var source: String = "Apple"
 }
     var apps = [
-        AppItem(name: "appstore"),
-        AppItem(name: "calculator"),
-        AppItem(name: "calendar"),
-        AppItem(name: "camera"),
-        AppItem(name: "clock"),
-        AppItem(name: "applemusic"),
-        AppItem(name: "clips"),
-        AppItem(name: "contacts"),
-        AppItem(name: "iosmessage"),
-        AppItem(name: "mail"),
-        AppItem(name: "photos")
+        AppItem(name: "AppStore"),
+        AppItem(name: "Calculator"),
+        AppItem(name: "Calendar"),
+        AppItem(name: "Camera"),
+        AppItem(name: "Clock"),
+        AppItem(name: "Apple Music"),
+        AppItem(name: "Clips"),
+        AppItem(name: "Contacts"),
+        AppItem(name: "Message"),
+        AppItem(name: "Mail"),
+        AppItem(name: "Photos")
         ]
     

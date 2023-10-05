@@ -11,7 +11,12 @@ struct ContentView: View {
     @State var filteredItems = apps
     
     var body: some View {
-        CustomNavigationView(view: HomeView(filteredItems: $filteredItems), onSearch: { (txt) in
+       CustomNavigationView(
+        view: AnyView(HomeView(filteredItems: $filteredItems)),
+        placeHolder: "Search",
+        largeTitle: true,
+        title: "CustomNavBar",
+        onSearch: { (txt) in
             if txt != ""{
                 self.filteredItems = apps.filter{$0.name.lowercased().contains(txt.lowercased())}
             } else{ self.filteredItems = apps

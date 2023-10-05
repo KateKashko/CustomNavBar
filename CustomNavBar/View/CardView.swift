@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     var item: AppItem
+    @State var show = false
     var body: some View {
         
         HStack(spacing: 15){
@@ -30,8 +31,8 @@ struct CardView: View {
                     Spacer(minLength: 10)
                     
                     VStack{
-                        Button(action: {}){
-                            Text("GET")
+                        Button(action: {show.toggle()}){
+                            Text(show ? "Open" : "GET")
                                 .fontWeight(.heavy)
                                 .padding(.vertical, 8)
                                 .padding(.horizontal, 20)

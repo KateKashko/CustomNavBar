@@ -15,7 +15,12 @@ struct CustomNavigationView: UIViewControllerRepresentable {
 
     
     // Just Change Your View That Requires Search Bar.
-    var view: HomeView
+    var view: AnyView
+    //ease of use
+    
+    var largeTitle: Bool
+    var title: String
+    var placeHolder: String
     
     //onSearch And OnCancel closures..
     
@@ -24,7 +29,11 @@ struct CustomNavigationView: UIViewControllerRepresentable {
     
     // requre closure on Call..
     
-    init(view: HomeView, onSearch: @escaping (String)->() ,onCancel: @escaping ()->()) {
+    init(view: AnyView, placeHolder: String? = "Search", largeTitle: Bool? = true, title: String, onSearch: @escaping (String)->() ,onCancel: @escaping ()->()) {
+        
+        self.title = title
+        self.largeTitle = largeTitle!
+        self.placeHolder = placeHolder!
         self.view = view
         self.onSearch = onSearch
         self.onCancel = onCancel
@@ -37,13 +46,13 @@ struct CustomNavigationView: UIViewControllerRepresentable {
         let controller = UINavigationController(rootViewController: childView)
         
         //new bar data
-        controller.navigationBar.topItem?.title = "BlaBla"
-        controller.navigationBar.prefersLargeTitles = true
+        controller.navigationBar.topItem?.title = title
+        controller.navigationBar.prefersLargeTitles = largeTitle
         
         //search bar
         
         let searchController = UISearchController()
-        searchController.searchBar.placeholder = "Search..."
+        searchController.searchBar.placeholder = placeHolder
         
         // setting delegate...
         searchController.searchBar.delegate = context.coordinator
@@ -62,7 +71,10 @@ struct CustomNavigationView: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {
-        
+        // Updating Real time
+        uiViewController.navigationBar.topItem?.title = title
+        uiViewController.navigationBar.topItem?.searchController?.searchBar.placeholder = placeHolder
+        uiViewController.navigationBar.prefersLargeTitles = largeTitle
     }
     
     class Coordinator: NSObject, UISearchBarDelegate{
