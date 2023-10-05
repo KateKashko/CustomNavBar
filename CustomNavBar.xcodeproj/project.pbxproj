@@ -14,6 +14,7 @@
 		9326F8732ACE9E5B001E99E2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326F8722ACE9E5B001E99E2 /* HomeView.swift */; };
 		9326F8752ACE9E74001E99E2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326F8742ACE9E74001E99E2 /* CardView.swift */; };
 		9326F8782ACE9EAD001E99E2 /* AppItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326F8772ACE9EAD001E99E2 /* AppItem.swift */; };
+		9326F87B2ACEA58E001E99E2 /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9326F87A2ACEA58E001E99E2 /* CustomNavigationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		9326F8722ACE9E5B001E99E2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9326F8742ACE9E74001E99E2 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		9326F8772ACE9EAD001E99E2 /* AppItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppItem.swift; sourceTree = "<group>"; };
+		9326F87A2ACEA58E001E99E2 /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				9326F8722ACE9E5B001E99E2 /* HomeView.swift */,
 				9326F8742ACE9E74001E99E2 /* CardView.swift */,
+				9326F87A2ACEA58E001E99E2 /* CustomNavigationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				9326F8732ACE9E5B001E99E2 /* HomeView.swift in Sources */,
 				9326F8782ACE9EAD001E99E2 /* AppItem.swift in Sources */,
 				9326F8672ACE9E44001E99E2 /* ContentView.swift in Sources */,
+				9326F87B2ACEA58E001E99E2 /* CustomNavigationView.swift in Sources */,
 				9326F8752ACE9E74001E99E2 /* CardView.swift in Sources */,
 				9326F8652ACE9E44001E99E2 /* CustomNavBarApp.swift in Sources */,
 			);

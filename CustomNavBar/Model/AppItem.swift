@@ -11,11 +11,9 @@ import SwiftUI
 struct AppItem: Identifiable {
     
     var id = UUID().uuidString
-    // both Image And Name Are Same.. I.
     var name: String
-    // since all Are Apple Native Apps.
     var source: String = "Apple"
-    
+}
     var apps = [
         AppItem(name: "appstore"),
         AppItem(name: "calculator"),
@@ -30,4 +28,3 @@ struct AppItem: Identifiable {
         AppItem(name: "photos")
         ]
     
-}
